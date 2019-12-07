@@ -1,5 +1,5 @@
 README for AES Implementation
-Seb Kryspin - skryspin@trincoll.edu
+skryspin
 11/15/18
 
 Welcome to my AES Implementation! Read on to learn how to encrypt and decrypt
