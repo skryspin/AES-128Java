@@ -38,8 +38,7 @@ Open the terminal and navigate to directory to which you downloaded these files.
 Run the following command.
   > javac *.java
 
-You've compiled the files! If one or more files do not compile, please contact
-sarah.kryspin@trincoll.edu for help.
+You've compiled the files!
 
 -------------------------------------------------------------------------------
 OVERVIEW of EXECUTABLES
