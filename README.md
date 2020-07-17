@@ -33,10 +33,7 @@ This download contains the following sample files:
 
 # Executables
 
-There are multiple files that can be run for testing purposes. NOTE: From now on
-we will refer to the "Rijndael AES Inspector"[1] and "AES.pdf" [2]
-collectively as the "sample sources." These sources were referenced heavily for
-the testing of this program.
+There are multiple files that can be run for testing purposes. 
 
 The following files may be executed:
 
