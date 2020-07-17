@@ -1,48 +1,37 @@
-README for AES Implementation
-skryspin
-11/15/18
+# About this AES-128 Java Implementation
+Created 11/15/2018
 
-Welcome to my AES Implementation! Read on to learn how to encrypt and decrypt
-files with this download.
+This program demonstrates the encryption and decryption process for AES-128. This code is for educational use only and should not be used 'in the wild' because it does not protect against timing-based attacks or other security flaws. 
 
-NOTE: We recommend you save this download in a new directory so that none of your
+You may read on to learn how to encrypt and decrypt
+files with this download. If you'd prefer to get straight to the action, move to [Instructions](#instructions).
+
+> :warning: It is recommended to save this download in a new directory so that none of your
 own files could be overwritten.
 
--------------------------------------------------------------------------------
-OVERVIEW
--------------------------------------------------------------------------------
+# Overview
 
 This download contains the following java files, in order of recommended inspection.
 
-Key - a class for creation and printing of Keys
-KeyExpander - a class to generate and store the 10 additional "round keys"
+* Key - a class for creation and printing of Keys
+* KeyExpander - a class to generate and store the 10 additional "round keys"
 needed for AES encryption
-AESEncrypter - a class to perform AES encryption with a specified key
-AESDecrypter - a class to perform AES decryption with a specified key
-EncryptTool - a class to encrypt a file of exactly 16 ASCII characters
-DecryptTool - a class to decrypt a file of exactly 16 hex bytes
-CBCEncryptTool - a class to encrypt a file of up to 1600 ASCII characters
-CBCDecryptTool - a class to decrypt a file of up to 1600 hex bytes
+* AESEncrypter - a class to perform AES encryption with a specified key
+* AESDecrypter - a class to perform AES decryption with a specified key
+* EncryptTool - a class to encrypt a file of exactly 16 ASCII characters
+* DecryptTool - a class to decrypt a file of exactly 16 hex bytes
+* CBCEncryptTool - a class to encrypt a file of up to 1600 ASCII characters
+* CBCDecryptTool - a class to decrypt a file of up to 1600 hex bytes
 
 This download contains the following sample files:
 
-dummy.txt - a file containing the text "Two One Nine Two"
-dummy_key.txt - a file containing a sample key
-1984.txt - a file containing the first couple of paragraphs of 1984 by George Orwell
+* dummy.txt - a file containing the text "Two One Nine Two"
+* dummy_key.txt - a file containing a sample key
+* 1984.txt - a file containing the first couple of paragraphs of 1984 by George Orwell
 
--------------------------------------------------------------------------------
-COMPILATION
--------------------------------------------------------------------------------
 
-Open the terminal and navigate to directory to which you downloaded these files.
-Run the following command.
-  > javac *.java
 
-You've compiled the files!
-
--------------------------------------------------------------------------------
-OVERVIEW of EXECUTABLES
--------------------------------------------------------------------------------
+# Executables
 
 There are multiple files that can be run for testing purposes. NOTE: From now on
 we will refer to the "Rijndael AES Inspector"[1] and "AES.pdf" [2]
@@ -51,34 +40,42 @@ the testing of this program.
 
 The following files may be executed:
 
-KeyExpander will print each round key of the two sample sources, to show that
+* KeyExpander will print each round key of the two sample sources, to show that
 it works correctly.
 
-AESEncrypter prints the encryption process for the sample sources.
+* AESEncrypter prints the encryption process for the sample sources.
 
-AESDecrypter prints the decryption process for the sample sources.
+* AESDecrypter prints the decryption process for the sample sources.
 
-EncryptTool will print the encryption process for a provided file "filename.txt"
+* EncryptTool will print the encryption process for a provided file "filename.txt"
 and save the encryption to "filename_encrypted.txt". If a key file was provided,
 it will NOT create a new key file. If a key file was not provided, it will save
 the generated key in "filename_key.txt." NOTE: Only encrypts first 16 letters
 
-DecryptTool will print the decryption process for a provided file "filename.txt"
+* DecryptTool will print the decryption process for a provided file "filename.txt"
 using a provided key file and save the decryption to "filename_decrypted.txt".
-NOTE: Only decrypts first 16 hex bytes
+> :checkmark: Only decrypts first 16 hex bytes
 
-CBCEncryptTool will print the encryption process for a provided file "filename.txt"
+* CBCEncryptTool will print the encryption process for a provided file "filename.txt"
 and save the encryption to "filename_encrypted.txt". If a key file was provided,
 it will NOT create a new key file. If a key file was not provided, it will save
 the generated key in "filename_key.txt." NOTE: Only encrypts first 1600 ASCII characters.
 
-CBCDecryptTool will print the decryption process for a provided file "filename.txt"
+* CBCDecryptTool will print the decryption process for a provided file "filename.txt"
 using a provided key file and save the decryption to "filename_decrypted.txt".
-NOTE: Only decrypts first 1600 hex bytes
+> :checkmark: Only decrypts first 1600 hex bytes
 
--------------------------------------------------------------------------------
-RUNNING INSTRUCTIONS
--------------------------------------------------------------------------------
+
+# Instructions
+##  Compilation
+
+Open the terminal and navigate to directory to which you downloaded these files.
+Run the following command.
+  > javac *.java
+
+You've compiled the files!
+
+## Execution
 
 To run the KeyExpander, do the following:
 > java KeyExpander
@@ -118,7 +115,7 @@ saved in "filename_IV.txt."
 OR
 >java CBCEncryptTool 1984.txt sample_key.txt (May use dummy_key.txt or your own key)
 
-NOTE: If you provide your own file to save the key, a new key file
+> :warning: If you provide your own file to save the key, a new key file
 won't be generated, so you must remember the location of the key file so you
 can provide it for decryption!
 
@@ -129,9 +126,7 @@ is called "sample_encrypted.txt," the decryption will be stored in
 
 >java CBCEncryptTool 1984_encrypted.txt 1984_key.txt 1984_IV.txt
 
--------------------------------------------------------------------------------
-REFERENCES
--------------------------------------------------------------------------------
+# References
 [1] E. Zabala. “Rijndael Inspector.” Internet:      http://www.formaestudio.com/rijndaelinspector/archivos/rijndaelanimation.html, 2008 [Nov. 17, 2018]
 
 [2] “AES.pdf.” Internet: https://kavaliro.com/wp-content/uploads/2014/03/AES.pdf, Mar. 2014 [Nov. 17, 2018]
