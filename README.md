@@ -37,30 +37,30 @@ There are multiple files that can be run for testing purposes.
 
 The following files may be executed:
 
-* KeyExpander will print each round key of the two sample sources, to show that
+* KeyExpander will print each round key of the two sample sources ([1] and [2]), to show that
 it works correctly.
 
-* AESEncrypter prints the encryption process for the sample sources.
+* AESEncrypter prints the encryption process for the sample sources([1] and [2]).
 
-* AESDecrypter prints the decryption process for the sample sources.
+* AESDecrypter prints the decryption process for the sample sources ([1] and [2]).
 
 * EncryptTool will print the encryption process for a provided file "filename.txt"
 and save the encryption to "filename_encrypted.txt". If a key file was provided,
 it will NOT create a new key file. If a key file was not provided, it will save
-the generated key in "filename_key.txt." NOTE: Only encrypts first 16 letters
+the generated key in "filename_key.txt." **Note:** Only encrypts first 16 letters
 
 * DecryptTool will print the decryption process for a provided file "filename.txt"
 using a provided key file and save the decryption to "filename_decrypted.txt".
-> :checkmark: Only decrypts first 16 hex bytes
+**Note:** Only decrypts first 16 hex bytes
 
 * CBCEncryptTool will print the encryption process for a provided file "filename.txt"
 and save the encryption to "filename_encrypted.txt". If a key file was provided,
 it will NOT create a new key file. If a key file was not provided, it will save
-the generated key in "filename_key.txt." NOTE: Only encrypts first 1600 ASCII characters.
+the generated key in "filename_key.txt." **Note:** Only encrypts first 1600 ASCII characters.
 
 * CBCDecryptTool will print the decryption process for a provided file "filename.txt"
 using a provided key file and save the decryption to "filename_decrypted.txt".
-> :checkmark: Only decrypts first 1600 hex bytes
+**Note:** Only decrypts first 1600 hex bytes
 
 
 # Instructions
@@ -68,20 +68,20 @@ using a provided key file and save the decryption to "filename_decrypted.txt".
 
 Open the terminal and navigate to directory to which you downloaded these files.
 Run the following command.
-  > javac *.java
+  `> javac *.java`
 
 You've compiled the files!
 
 ## Execution
 
 To run the KeyExpander, do the following:
-> java KeyExpander
+`> java KeyExpander`
 
 To run AESEncrypter:
->java AESEncrypter
+`>java AESEncrypter`
 
 To run AESDecrypter:
->java AESDecrypter
+`>java AESDecrypter`
 
 To run EncryptTool, you must have a text file consisting of 16 ASCII characters.
 You may also have a file of 16 hex bytes, separated by spaces, with no prefixes
@@ -90,15 +90,15 @@ and saved in a file as "filename_key.txt". For example, if the file is called
 "sample.txt" the key will be saved in "sample_key.txt" and the encryption
 will be saved in "sample_encrypted.txt"
 
->java EncryptTool dummy.txt
+`>java EncryptTool dummy.txt`
 Or
->java EncryptTool dummy.txt dummy_key.txt
+`>java EncryptTool dummy.txt dummy_key.txt`
 
 To run DecryptTool, you must have a text file consisting of 16 hex bytes and a key
 file consisting of 16 hex bytes. If the text file is called "sample_encrypted.txt"
 the decryption will be saved in "sample_decrypted.txt".
 
->java DecryptTool dummy_encrypted.txt dummy_key.txt
+`>java DecryptTool dummy_encrypted.txt dummy_key.txt`
 
 To run CBCEncryptTool, you must have a text file of up to 1600 ASCII characters
 (although if there are more it will simply ignore them). You may optionally
@@ -108,9 +108,9 @@ will be saved in "filename_key.txt" and the encryption will be saved in
 "filename_encrypted.txt." Additionally, a random initialization vector will be
 saved in "filename_IV.txt."
 
->java CBCEncryptTool 1984.txt
+`java CBCEncryptTool 1984.txt`
 OR
->java CBCEncryptTool 1984.txt sample_key.txt (May use dummy_key.txt or your own key)
+`java CBCEncryptTool 1984.txt sample_key.txt (May use dummy_key.txt or your own key)`
 
 > :warning: If you provide your own file to save the key, a new key file
 won't be generated, so you must remember the location of the key file so you
@@ -121,7 +121,7 @@ a key file of 16 hex bytes, and an IV file of 16 hex bytes. If the encrypted fil
 is called "sample_encrypted.txt," the decryption will be stored in
 "sample_decrypted.txt"
 
->java CBCEncryptTool 1984_encrypted.txt 1984_key.txt 1984_IV.txt
+`java CBCEncryptTool 1984_encrypted.txt 1984_key.txt 1984_IV.txt`
 
 # References
 [1] E. Zabala. “Rijndael Inspector.” Internet:      http://www.formaestudio.com/rijndaelinspector/archivos/rijndaelanimation.html, 2008 [Nov. 17, 2018]
